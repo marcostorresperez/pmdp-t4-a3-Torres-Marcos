@@ -1,6 +1,8 @@
 package matope.simarro.pmdm_t4a13_marcos_torres.pojo;
 
-public class Cancion {
+import java.io.Serializable;
+
+public class Cancion implements Serializable {
     private String titulo;
     private String duración;
     private String posicion;

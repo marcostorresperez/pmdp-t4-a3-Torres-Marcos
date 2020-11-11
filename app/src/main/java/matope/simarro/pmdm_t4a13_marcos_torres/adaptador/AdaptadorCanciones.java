@@ -19,7 +19,7 @@ public class AdaptadorCanciones extends ArrayAdapter<Cancion> {
     ArrayList<Cancion> listaCanciones;
 
     public AdaptadorCanciones(Fragment context, ArrayList<Cancion> listaCanciones) {
-        super(context.getActivity(), R.layout.layout_elemento_disco_lista, listaCanciones);
+        super(context.getActivity(), R.layout.layout_elemento_cancion_lista, listaCanciones);
         this.context = context.getActivity();
         this.listaCanciones = listaCanciones;
     }
@@ -28,11 +28,12 @@ public class AdaptadorCanciones extends ArrayAdapter<Cancion> {
         LayoutInflater inflater = context.getLayoutInflater();
         View item = inflater.inflate(R.layout.layout_elemento_cancion_lista, null);
         TextView lblTitulo = (TextView) item.findViewById(R.id.LblTitulo);
+
         lblTitulo.setText(listaCanciones.get(position).getTitulo());
         TextView lblDuracion = (TextView) item.findViewById(R.id.LblDuracion);
-        lblDuracion.setText(listaCanciones.get(position).getDuración());
+        lblDuracion.setText(getContext().getString(R.string.duracion) + listaCanciones.get(position).getDuración());
         TextView lblPosicion = (TextView) item.findViewById(R.id.LblPosicion);
-        lblPosicion.setText(listaCanciones.get(position).getPosicion());
+        lblPosicion.setText(getContext().getString(R.string.posicion)+listaCanciones.get(position).getPosicion());
         return (item);
     }
 }

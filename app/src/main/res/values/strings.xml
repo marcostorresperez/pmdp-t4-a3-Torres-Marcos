@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">pmdm-t4a13-Marcos-Torres</string>
+    <string name="duracion">Duración: </string>
+    <string name="anyo">Año: </string>
+    <string name="canciones">Canciones: </string>
+    <string name="posicion">Posición: </string>
 </resources>

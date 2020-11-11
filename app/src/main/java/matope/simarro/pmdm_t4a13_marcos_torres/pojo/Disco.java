@@ -1,17 +1,19 @@
 package matope.simarro.pmdm_t4a13_marcos_torres.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Disco {
+public class Disco implements Serializable {
     private String nombre;
     private String anyo;
     private String numCanciones;
     private ArrayList<Cancion> listaCanciones;
 
-    public Disco(String nombre, String anyo, String numCanciones) {
+    public Disco(String nombre, String anyo, String numCanciones, ArrayList<Cancion> listaCanciones) {
         this.nombre = nombre;
         this.anyo = anyo;
         this.numCanciones = numCanciones;
+        this.listaCanciones = listaCanciones;
     }
 
     public String getNombre() {

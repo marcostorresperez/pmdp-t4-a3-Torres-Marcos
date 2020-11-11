@@ -27,12 +27,12 @@ public class AdaptadorDiscos extends ArrayAdapter<Disco> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         View item = inflater.inflate(R.layout.layout_elemento_disco_lista, null);
-        TextView lblNombre = (TextView) item.findViewById(R.id.LblNombre);
+        TextView lblNombre =  item.findViewById(R.id.LblNombre);
         lblNombre.setText(listaDiscos.get(position).getNombre());
-        TextView lblAnyo = (TextView) item.findViewById(R.id.LblAnyo);
-        lblAnyo.setText(listaDiscos.get(position).getAnyo());
-        TextView lblNum = (TextView) item.findViewById(R.id.LblNum);
-        lblNum.setText(listaDiscos.get(position).getNumCanciones());
+        TextView lblAnyo =  item.findViewById(R.id.LblAnyo);
+        lblAnyo.setText(getContext().getString(R.string.anyo)+listaDiscos.get(position).getAnyo());
+        TextView lblNum =  item.findViewById(R.id.LblNum);
+        lblNum.setText(getContext().getString(R.string.canciones)+listaDiscos.get(position).getNumCanciones());
         return (item);
     }
 }
